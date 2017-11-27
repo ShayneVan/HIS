@@ -1,0 +1,211 @@
+﻿@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container">
+        <div class="masthead">
+            <h3 class="text-muted">XX医院挂号平台</h3>
+            <nav>
+                <ul class="nav nav-justified">
+                    <li>
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                全部科室
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <li><a href="#">内科</a></li>
+                                <li><a href="#">外科</a></li>
+                                <li><a href="#">妇产科</a></li>
+                                <li><a href="#">生殖中心</a></li>
+                                <li><a href="#">儿科</a></li>
+                                <li><a href="#">骨外科</a></li>
+                                <li><a href="#">眼科</a></li>
+                                <li><a href="#">口腔科</a></li>
+                                <li><a href="#">耳鼻咽喉头颈科</a></li>
+                                <li><a href="#">其他科室</a></li>
+                         
+                            </ul>
+                    </li>
+                    <li class="active">@Html.ActionLink("按科室挂号", "guahao", "Home")</li>
+                    <li>@Html.ActionLink("按疾病挂号","guahaoByD","Home")</li>
+                    <li><a href="#">最新公告</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">热门科室</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul style="list-style:none">
+                            <li style="float:left;margin-left:30px">神经外科</li>
+                            <li style="float:left;margin-left:30px">妇科</li>
+                            <li style="float:left;margin-left:30px">产科</li>
+                            <li style="float:left;margin-left:30px">儿科</li>
+                            <li style="float:left;margin-left:30px">骨科</li>
+                            <li style="float:left;margin-left:30px">眼科</li>
+                            <li style="float:left;margin-left:30px">耳鼻喉</li>
+                            <li style="float:left;margin-left:30px">肿瘤外科</li>
+                            <li style="float:left;margin-left:30px">心理咨询科</li>
+                            <li style="float:left;margin-left:30px">中医科</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li role="presentation"><a href="#">内科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">外科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">妇产科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">生殖中心<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">儿科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">骨外科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">眼科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">口腔科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">耳鼻咽喉头颈科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">肿瘤科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">皮肤性病科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">男性学科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">皮肤美容<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">烧伤科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">精神心理科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">中医科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">中西医结合科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">传染病科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">结核病科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">介入医学科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">康复医学科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">运动医学科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">职业病科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">地方病科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">营养科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">医学影像学<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">病理科<span class="label label-default">></span></a></li>
+                        <li role="presentation"><a href="#">其他科室<span class="label label-default">></span></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-8">
+                    <h4 style="color:deepskyblue">内科</h4>
+                    <table class="table-hover table">
+                        <tr>
+                            <td>@Html.ActionLink("心脑血管科","guahao_next","Home",new {@style="color:black" })</td>
+                            <td>神经内科</td>
+                            <td>消化内科</td>
+                            <td>内分泌科</td>
+                            <td>免疫科</td>
+                        </tr>
+                        <tr>
+                            <td>呼吸科</td>
+                            <td>肾病内科</td>
+                            <td>血液科</td>
+                            <td>感染内科</td>
+                            <td>过敏反应科</td>
+                        </tr>
+                        <tr>
+                            <td>老年病科</td>
+                            <td>普通内科</td>
+                            <td>高压氧科</td>
+                        </tr>
+                    </table>
+                    <h4 style="color:deepskyblue">外科</h4>
+                    <table class="table-hover table">
+                        <tr>
+                            <td>神经外科</td>
+                            <td>功能性神经外科</td>
+                            <td>心血管外科</td>
+                            <td>胸外科</td>
+                            <td>整形科</td>
+                        </tr>
+                        <tr>
+                            <td>乳腺外科</td>
+                            <td>泌尿外科</td>
+                            <td>肝胆外科</td>
+                            <td>肛肠科</td>
+                            <td>血管外科</td>
+                        </tr>
+                        <tr>
+                            <td>器官移植</td>
+                            <td>微创外科</td>
+                            <td>普外科</td>
+                            <td>脑外科</td>
+                            <td>烧伤科</td>
+                        </tr>
+                    </table>
+                    <h4 style="color:deepskyblue">妇产科</h4>
+                    <table class="table-hover table">
+                        <tr>
+                            <td>妇科</td>
+                            <td>产科</td>
+                            <td>妇科内分泌</td>
+                            <td>妇泌尿科</td>
+                            <td>遗传咨询科</td>
+                        </tr>
+                        <tr>
+                            <td>计划生育科</td>
+                            <td>妇产科</td>
+                        </tr>
+                    </table>
+                    <h4 style="color:deepskyblue">生殖中心</h4>
+                    <table class="table-hover table">
+                        <tr>
+                            <td>生殖中心</td>
+                        </tr>
+                    </table>
+                    <h4 style="color:deepskyblue">儿科</h4>
+                    <table class="table-hover table">
+                        <tr>
+                            <td>儿科</td>
+                            <td>新生儿科</td>
+                            <td>小儿呼吸科</td>
+                            <td>小儿营养保健科</td>
+                            <td>小儿心内科</td>
+                        </tr>
+                        <tr>
+                            <td>小儿皮肤科</td>
+                            <td>小儿精神科</td>
+                            <td>小儿外科</td>
+                            <td>小儿心外科</td>
+                            <td>小儿骨科</td>
+                        </tr>
+                        <tr>
+                            <td>小儿神经外科</td>
+                            <td>小儿康复科</td>
+                        </tr>
+                    </table>
+                    <h4 style="color:deepskyblue">骨外科</h4>
+                    <h4 style="color:deepskyblue">眼科</h4>
+                    <h4 style="color:deepskyblue">口腔科</h4>
+                    <h4 style="color:deepskyblue">耳鼻咽喉头颈科</h4>
+                    <h4 style="color:deepskyblue">肿瘤科</h4>
+                    <h4 style="color:deepskyblue">皮肤性病科</h4>
+                    <h4 style="color:deepskyblue">男性学科</h4>
+                    <h4 style="color:deepskyblue">皮肤美容</h4>
+                    <h4 style="color:deepskyblue">烧伤科</h4>
+                    <h4 style="color:deepskyblue">精神心理科</h4>
+                    <h4 style="color:deepskyblue">中医科</h4>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>
+

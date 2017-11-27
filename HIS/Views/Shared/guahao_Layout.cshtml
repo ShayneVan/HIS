@@ -1,0 +1,51 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container">
+        <div class="masthead">
+            <h3 class="text-muted">XX医院挂号平台</h3>
+            <nav>
+                <ul class="nav nav-justified">
+                    <li>
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            全部科室
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><a href="#">内科</a></li>
+                            <li><a href="#">外科</a></li>
+                            <li><a href="#">妇产科</a></li>
+                            <li><a href="#">生殖中心</a></li>
+                            <li><a href="#">儿科</a></li>
+                            <li><a href="#">骨外科</a></li>
+                            <li><a href="#">眼科</a></li>
+                            <li><a href="#">口腔科</a></li>
+                            <li><a href="#">耳鼻咽喉头颈科</a></li>
+                            <li><a href="#">其他科室</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="active"><a href="#">按科室挂号</a></li>
+                    <li><a href="#">按疾病挂号</a></li>
+                    <li><a href="#">最新公告</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>
+

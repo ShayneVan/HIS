@@ -1,0 +1,236 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @*<style type="text/css">
+        .D-list dd ul li
+        {
+            font-size: 12px;
+            float: left;
+            margin-right: 4px;
+            margin-top: 4px;
+            width: 172px;
+            line-height: 24px;
+            text-align: left;
+        }
+        .D-list dt
+        {
+            width: 76px;
+            overflow: hidden;
+            color: #57B6DD;
+            font-size: 15px;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .D-list dd
+        {
+            float:left;
+            width:551px;
+            padding-left:37px;
+            padding-top:10px;
+        }
+    </style>*@
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    
+</head>
+<body>
+    <div class="container">
+        <div class="masthead">
+            <h3 class="text-muted">XX医院挂号平台</h3>
+            <nav>
+                <ul class="nav nav-justified">
+                    <li>
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            全部科室
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><a href="#">内科</a></li>
+                            <li><a href="#">外科</a></li>
+                            <li><a href="#">妇产科</a></li>
+                            <li><a href="#">生殖中心</a></li>
+                            <li><a href="#">儿科</a></li>
+                            <li><a href="#">骨外科</a></li>
+                            <li><a href="#">眼科</a></li>
+                            <li><a href="#">口腔科</a></li>
+                            <li><a href="#">耳鼻咽喉头颈科</a></li>
+                            <li><a href="#">其他科室</a></li>
+
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("按科室挂号","guahao","Home")</li>
+                    <li class="active">@Html.ActionLink("按疾病挂号", "guahaoByD", "Home")</li>
+                    <li><a href="#">最新公告</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container">
+            <div class="col-md-12">
+                <h4>常见疾病</h4>
+                <table class="table table-hover">
+                    <tr>
+                        <td>眼底病</td>
+                        <td>鼻炎</td>
+                        <td>妇科炎症</td>
+                        <td>肠炎</td>
+                        <td>牙周炎</td>
+                    </tr>
+                    <tr>
+                        <td>脑血管病</td>
+                        <td>皮肤过敏</td>
+                        <td>胃炎</td>
+                        <td>肺癌</td>
+                        <td>糖尿病</td>
+                        <td class="active">展开更多</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="~/pic/HIS_1.png"/>
+                </div>
+                <div class="col-md-8">
+                    <h4 style="color:deepskyblue;border-bottom:1px solid">肌肉</h4>
+                        
+                    <div class="col-md-2">
+                            <img class="center-block" src="~/pic/D_1.jpg" />
+                            <p class="text-center" style="color:deepskyblue">肌肉</p>
+                        </div>
+                    <div class="col-md-10">
+                            <table class="table">
+                                <tr>
+                                    <td>@Html.ActionLink("癫痫", "guahao_next", "Home",new { @style="color:black"})</td>
+                                    <td>腹股沟疝</td>
+                                    <td>肌病</td>
+                                    <td>乳腺纤维瘤</td>
+                                </tr>
+                                <tr>
+                                    <td>疼痛</td>
+                                    <td>纤维瘤</td>
+                                    <td>腰肌劳损</td>
+                                    <td>营养不良</td>           
+                                </tr>
+                                <tr>
+                                    <td>重症肌无力</td>
+                                </tr>
+                            </table>
+                        </div>
+                    <h4 style="color:deepskyblue;border-bottom:1px solid">皮肤</h4>
+
+                    <div class="col-md-2">
+                        <img class="center-block" src="~/pic/D_2.jpg" />
+                        <p class="text-center" style="color:deepskyblue">皮肤</p>
+                    </div>
+                    <div class="col-md-10">
+                        <table class="table">
+                            <tr>
+                                <td>疤痕</td>
+                                <td>白癜风</td>
+                                <td>瘢痕疙瘩</td>
+                                <td>扁平疣</td>
+                            </tr>
+                            <tr>
+                                <td>病理诊断</td>
+                                <td>痤疮</td>
+                                <td>带状抱枕</td>
+                                <td>冻伤</td>
+                            </tr>
+                            <tr>
+                                <td>多汗症</td>
+                                <td>放射诊断</td>
+                                <td>腹外疝</td>
+                                <td>过敏性紫癜</td>
+                            </tr>
+                            <tr>
+                                <td>红斑狼疮</td>
+                                <td>花粉症</td>
+                                <td>黄褐斑</td>
+                                <td>鸡眼</td>
+                            </tr>
+                            <tr>
+                                <td>激素依赖性皮炎</td>
+                                <td>尖锐湿庞</td>
+                                <td>结节性红斑</td>
+                                <td>毛囊炎</td>
+                            </tr>
+                            <tr>
+                                <td>...</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <h4 style="color:deepskyblue;border-bottom:1px solid">免疫系统淋巴</h4>
+
+                    <div class="col-md-2">
+                        <img class="center-block" src="~/pic/D_3.jpg" />
+                        <p class="text-center" style="color:deepskyblue">免疫系统淋巴</p>
+                    </div>
+                    <div class="col-md-10">
+                        <table class="table">
+                            <tr>
+                                <td>癫痫</td>
+                                <td>腹股沟疝</td>
+                                <td>肌病</td>
+                                <td>乳腺纤维瘤</td>
+                            </tr>
+                            <tr>
+                                <td>疼痛</td>
+                                <td>纤维瘤</td>
+                                <td>腰肌劳损</td>
+                                <td>营养不良</td>
+                            </tr>
+                            <tr>
+                                <td>重症肌无力</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <h4 style="color:deepskyblue;border-bottom:1px solid">周围神经系统</h4>
+
+                    <div class="col-md-2">
+                        <img class="center-block" src="~/pic/D_4.jpg" />
+                        <p class="text-center" style="color:deepskyblue">周围神经系统</p>
+                    </div>
+                    <div class="col-md-10">
+                        <table class="table">
+                            <tr>
+                                <td>癫痫</td>
+                                <td>腹股沟疝</td>
+                                <td>肌病</td>
+                                <td>乳腺纤维瘤</td>
+                            </tr>
+                            <tr>
+                                <td>疼痛</td>
+                                <td>纤维瘤</td>
+                                <td>腰肌劳损</td>
+                                <td>营养不良</td>
+                            </tr>
+                            <tr>
+                                <td>重症肌无力</td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>
+
