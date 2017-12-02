@@ -43,5 +43,9 @@ namespace HIS.Controllers
         {
             return View();
         }
+        public ActionResult Suceed()
+        {
+            return View();
+        }
     }
 }

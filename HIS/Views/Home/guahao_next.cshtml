@@ -36,8 +36,8 @@
 
                         </ul>
                     </li>
-                    <li><a href="#">按科室挂号</a></li>
-                    <li><a href="#">按疾病挂号</a></li>
+                    <li>@Html.ActionLink("按科室挂号", "guahao", "Home")</li>
+                    <li>@Html.ActionLink("按疾病挂号", "guahaoByD", "Home")</li>
                     <li><a href="#">最新公告</a></li>
                 </ul>
             </nav>
@@ -76,6 +76,8 @@
                             </button>
 
                             <!-- Modal -->
+                            @using (Html.BeginForm("GetReservationInfo", "Reservation",FormMethod.Post,new { @class="form-horizontal"}))
+                            {
                             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -83,30 +85,32 @@
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                             <h4 class="modal-title" id="myModalLabel">请填写您的相关信息</h4>
                                         </div>
+                                        
                                         <div class="modal-body">
-                                            <form class="form-horizontal">
+                                            
+                                            <form class="form-horizontal" id="frm">
                                                 <div class="form-group">
                                                     <label for="inputName" class="col-sm-2 control-label">姓名</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="Name" placeholder="姓名">
+                                                        @Html.TextBox("Name", null,new { @class = "form-control" })
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="inputIdNumber" class="col-sm-2 control-label">身份证号</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="inputIdNumber" placeholder="身份证号">
+                                                    <div class="col-sm-10">                                                        
+                                                        @Html.TextBox("IdNumber", null, new { @class="form-control"})
                                                     </div>
                                                 </div> 
                                                 <div class="form-group">
                                                     <label for="inputPhone" class="col-sm-2 control-label">联系电话</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" id="Phone" placeholder="联系电话">
+                                                        @Html.TextBox("Phone", null, new { @class = "form-control" })
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="SelectSex" class="col-sm-2 control-label">性别</label>
                                                     <div class="col-sm-10">
-                                                        <select class="form-control">
+                                                        <select class="form-control" id="Sex">
                                                             <option>男</option>
                                                             <option>女</option>
                                                         </select>
@@ -115,18 +119,35 @@
                                                 <div class="form-group">
                                                     <label for="situation_info" class="col-sm-2 control-label">病情简单描述</label>
                                                     <div class="col-sm-10">
-                                                        <textarea class="form-control" rows="3"></textarea>
+                                                        <textarea class="form-control" rows="3" id="Record"></textarea>
                                                     </div>
                                                 </div>                                                                                  
                                             </form>
+                                            
+                                            
                                         </div>
+
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                            <button type="button" class="btn btn-primary">确认</button>
+                                            <button type="submit" class="btn btn-primary" name="submit" id="btnsubmit" value="submit">确认</button>
+                                            @*<script type="text/javascript">
+                                                $("#btnsubmit").click(function(){
+                                                    $.ajax({
+                                                        url: "/Home/guahao_next",
+                                                        type: "POST",
+                                                        dataType: "JSON",
+                                                        data: {patientname:$("Name").val()}
+                                                    })
+                                                })
+                                            </script>*@
+
                                         </div>
+
                                     </div>
+                                        
                                 </div>
                             </div>
+}
                         </td>
                         <td></td>
                         <td>约满</td>
