@@ -23,7 +23,8 @@ namespace HIS.Controllers
             patientinfo.PatientName = name;
             BaseClass bc = new BaseClass();
             bc.SaveReservation(patientinfo);
-            return View();
+            //return Content("预约成功！");
+            return View("Suceed");
         }
     }
 }
