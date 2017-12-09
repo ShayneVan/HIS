@@ -47,5 +47,9 @@ namespace HIS.Controllers
         {
             return View();
         }
+        public ActionResult Record()
+        {
+            return View();
+        }
     }
 }

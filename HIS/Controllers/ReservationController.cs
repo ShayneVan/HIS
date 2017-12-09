@@ -19,8 +19,12 @@ namespace HIS.Controllers
         public ActionResult GetReservationInfo()
         {
             string name = Request.Form["Name"];
+            string id = Request.Form["IdNumber"];
+            string phone = Request.Form["Phone"];
             PatientInfo patientinfo = new PatientInfo();
             patientinfo.PatientName = name;
+            patientinfo.PatientID = id;
+            patientinfo.PatientPhone = phone;
             BaseClass bc = new BaseClass();
             bc.SaveReservation(patientinfo);
             //return Content("预约成功！");
