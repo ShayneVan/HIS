@@ -1,83 +1,40 @@
-﻿@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-</head>
-<body>
-    <div class="container">
-        <div class="masthead">
-            <h3 class="text-muted">XX医院挂号平台</h3>
-            <nav>
-                <ul class="nav nav-justified">
-                    <li>
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            全部科室
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <li><a href="#">内科</a></li>
-                            <li><a href="#">外科</a></li>
-                            <li><a href="#">妇产科</a></li>
-                            <li><a href="#">生殖中心</a></li>
-                            <li><a href="#">儿科</a></li>
-                            <li><a href="#">骨外科</a></li>
-                            <li><a href="#">眼科</a></li>
-                            <li><a href="#">口腔科</a></li>
-                            <li><a href="#">耳鼻咽喉头颈科</a></li>
-                            <li><a href="#">其他科室</a></li>
-
-                        </ul>
-                    </li>
-                    <li>@Html.ActionLink("按科室挂号", "guahao", "Home")</li>
-                    <li>@Html.ActionLink("按疾病挂号", "guahaoByD", "Home")</li>
-                    <li><a href="#">最新公告</a></li>
-                </ul>
-            </nav>
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-4" style="margin-top:7%">
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active">@Html.ActionLink("按科室挂号", "Guahao", "Home")</li>
+                <li>@Html.ActionLink("按疾病挂号", "GuahaoByDisease", "Home")</li>
+                <li>@Html.ActionLink("查询/取消", "SearchOrCancel", "Home")</li>
+                <li>@Html.ActionLink("停诊信息", "", "")</li>
+                <li>@Html.ActionLink("预约须知", "", "")</li>
+                <li>@Html.ActionLink("最新公告", "News", "Home")</li>
+            </ul>
         </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <ul class="nav nav-tabs">
-                    <li role="presentation" class="active"><a href="#">预约挂号</a></li>
-                    <li role="presentation"><a href="#">预约须知</a></li>
-                    <li role="presentation"><a href="#">停诊信息</a></li>
-                    <li role="presentation"><a href="#">查询/取消</a></li>
-                </ul>
-            </div>
-            <div class="col-md-12">
-                <h3>科室排班表</h3>
-                <table class="table table-hover">
-                    <tr>
-                        <td>#</td>
-                        <td>星期一</td>
-                        <td>星期二</td>
-                        <td>星期三</td>
-                        <td>星期四</td>
-                        <td>星期五</td>
-                        <td>星期六</td>
-                        <td>星期日</td>
-                    </tr>
-                    <tr>
-                        <td>上午</td>
-                        <td>约满</td>
-                        <td>约满</td>
-                        <td>
-                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
-                                可预约
-                            </button>
+        <div class="col-md-8">
+            <h3>科室排班表</h3>
+            <table class="table table-hover">
+                <tr>
+                    <td>#</td>
+                    <td>星期一</td>
+                    <td>星期二</td>
+                    <td>星期三</td>
+                    <td>星期四</td>
+                    <td>星期五</td>
+                    <td>星期六</td>
+                    <td>星期日</td>
+                </tr>
+                <tr>
+                    <td>上午</td>
+                    <td>约满</td>
+                    <td>约满</td>
+                    <td>
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+                            可预约
+                        </button>
 
-                            <!-- Modal -->
-                            @using (Html.BeginForm("GetReservationInfo", "Reservation",FormMethod.Post,new { @class="form-horizontal"}))
-                            {
+                        <!-- Modal -->
+                        @using (Html.BeginForm("GetReservationInfo", "Reservation", FormMethod.Post, new { @class = "form-horizontal" }))
+                        {
                             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -85,22 +42,22 @@
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                             <h4 class="modal-title" id="myModalLabel">请填写您的相关信息</h4>
                                         </div>
-                                        
+
                                         <div class="modal-body">
-                                            
+
                                             <form class="form-horizontal" id="frm">
                                                 <div class="form-group">
                                                     <label for="inputName" class="col-sm-2 control-label">姓名</label>
                                                     <div class="col-sm-10">
-                                                        @Html.TextBox("Name", null,new { @class = "form-control" })
+                                                        @Html.TextBox("Name", null, new { @class = "form-control" })
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="inputIdNumber" class="col-sm-2 control-label">身份证号</label>
-                                                    <div class="col-sm-10">                                                        
-                                                        @Html.TextBox("IdNumber", null, new { @class="form-control"})
+                                                    <div class="col-sm-10">
+                                                        @Html.TextBox("IdNumber", null, new { @class = "form-control" })
                                                     </div>
-                                                </div> 
+                                                </div>
                                                 <div class="form-group">
                                                     <label for="inputPhone" class="col-sm-2 control-label">联系电话</label>
                                                     <div class="col-sm-10">
@@ -121,10 +78,10 @@
                                                     <div class="col-sm-10">
                                                         <textarea class="form-control" rows="3" id="Record"></textarea>
                                                     </div>
-                                                </div>                                                                                  
+                                                </div>
                                             </form>
-                                            
-                                            
+
+
                                         </div>
 
                                         <div class="modal-footer">
@@ -134,46 +91,38 @@
                                         </div>
 
                                     </div>
-                                        
+
                                 </div>
                             </div>
-}
-                        </td>
-                        <td></td>
-                        <td>约满</td>
-                        <td>约满</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>下午</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>下午</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
-            </div>
+                        }
+                    </td>
+                    <td></td>
+                    <td>约满</td>
+                    <td>约满</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>下午</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>下午</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
         </div>
     </div>
-    <script type="text/javascript">
-        $(function () {
-            $('[data-toggle="popover"]').popover()
-        })
-    </script>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-</body>
-</html>
+
+</div>

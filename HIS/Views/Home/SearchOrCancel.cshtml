@@ -1,0 +1,47 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-4" style="margin-top:7%">
+            <ul class="nav nav-pills nav-stacked">
+                <li>@Html.ActionLink("按科室挂号", "Guahao", "Home")</li>
+                <li>@Html.ActionLink("按疾病挂号", "GuahaoByDisease", "Home")</li>
+                <li class="active">@Html.ActionLink("查询/取消", "SearchOrCancel", "Home")</li>
+                <li>@Html.ActionLink("停诊信息", "", "")</li>
+                <li>@Html.ActionLink("预约须知", "", "")</li>
+                <li>@Html.ActionLink("最新公告", "News", "Home")</li>
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <form>
+                <div style="margin-left:20%;margin-top:15%">
+                    <div class="form-group">
+                        <label for="input" class="control-label">请输入您的预约号（或身份证号、手机号）</label>
+                        <input type="text" class="form-control" id="Search" />
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">查询</button>
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">所查询的预约信息</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <label class="control-label">fgl您好：</label>
+                                        <p>    您的预约的时间为：12月13号 星期三 上午 在内科-心脑血管科进行就诊。</p>
+                                        <p>如遇突发情况，不能即使就诊，可以选择取消预约或修改预约时间。</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="location.href='guahao_next'">修改预约时间</button>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="location.href='Cancel_Suceed'">取消预约</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

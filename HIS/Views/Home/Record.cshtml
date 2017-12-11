@@ -1,72 +1,35 @@
-﻿
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-</head>
-<body>
-    @*标题*@
+﻿    @*查询页面*@
     <div class="container">
         <div class="row">
-            <div class="page-header">
-                <h1>XX Hospital<small>To save more live.</small></h1>
+            <div style="margin-left:30%;margin-top:5%;mari">
+                <form>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">请输入您的病例编号或身份证号：</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="button" class="btn btn-default" id="btnsearch">查询</button>
+
+                        </div>
+                    </div>
+                </form>
             </div>
-        </div>
-    </div>
-    @*导航*@
-    <div class="container">
-        <div class="row">
-            <ul class="nav nav-tabs">
-                <li role="presentation">@Html.ActionLink("主页","Index","Home")</li>
-                <li role="presentation">@Html.ActionLink("预约平台", "guahao", "Home")</li>
-                <li role="presentation" class="active">@Html.ActionLink("查看病例","Record","H")</li>
-                <li role="presentation"><a href="localhost:10405/Login.asp">后台管理系统</a></li>
-            </ul>
-        </div>
-    </div>
-    @*查询页面*@
-    <div class="container">
-        <div class="row">
-            <form class="form-horizontal">
-                <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">请输入您的病例编号或身份证号：</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="button" class="btn btn-default" id="btnsearch">查询</button>
-                        
-                    </div>
-                </div>
-            </form>
        </div>
     </div>
     @*结果*@
     <div class="container" id="result">
         <div class="row">
             @*查询信息在此显示*@
-            <img src="~/pic/Record.png" class="img"/>
+            <div style="margin-top:5%;margin-left:10%">
+                <img src="~/pic/Record.png" class="img" />
+            </div>
         </div>
     </div>
-    @*页尾版权信息*@
-    <footer class="footer">
-        <div class="container">
-            <p>@@版权所有 范国良_1440226138</p>
-            <p>Designed and built with all the love in the world by @@fgl.</p>
-        </div>
-    </footer>
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+
         <script>
             $("#result").hide();
         </script>
@@ -75,7 +38,3 @@
                                 $("#result").toggle();
                             })
         </script>
-    
-        }
-</body>
-</html>

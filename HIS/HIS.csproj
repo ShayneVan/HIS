@@ -188,17 +188,15 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\guahao.cshtml" />
-    <Content Include="Views\Home\patient_info.cshtml" />
-    <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\guahao_next.cshtml" />
     <Content Include="Views\Shared\guahao_Layout.cshtml" />
-    <Content Include="Views\Home\guahaoByD.cshtml" />
+    <Content Include="Views\Home\GuahaoByDisease.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Reservation\Suceed.cshtml" />
     <Content Include="Views\Home\Record.cshtml" />
+    <Content Include="Views\Home\Guahao.cshtml" />
+    <Content Include="Views\Home\SearchOrCancel.cshtml" />
+    <Content Include="Views\Home\Cancel_Suceed.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

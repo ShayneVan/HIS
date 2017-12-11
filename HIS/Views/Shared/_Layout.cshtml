@@ -1,37 +1,41 @@
 ﻿<!DOCTYPE html>
+
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - 我的 ASP.NET 应用程序</title>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("应用程序名称", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("主页", "Index", "Home")</li>
-                    <li>@Html.ActionLink("关于", "About", "Home")</li>
-                    <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
-                </ul>
+    @*标题*@
+    <div class="container">
+        <div class="row">
+            <div class="page-header">
+                <h1>XX Hospital<small>To save more live.</small></h1>
             </div>
         </div>
     </div>
-    @RenderBody();
-
+    @*导航*@
+    <div class="container">
+        <div class="row">
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active">@Html.ActionLink("主页", "Index", "Home")</li>
+                <li role="presentation">@Html.ActionLink("预约平台", "Guahao", "Home")</li>
+                <li role="presentation">@Html.ActionLink("查看病例", "Record", "Home")</a></li>
+                <li role="presentation"><a href="localhost:10405/Login.asp">后台管理系统</a></li>
+            </ul>
+        </div>
+    </div>
+    @RenderBody()
+    @*页尾版权信息*@
+    <footer class="footer">
+        <div class="container">
+            <p>@@版权所有 范国良_1440226138</p>
+            <p>Designed and built with all the love in the world by @@fgl.</p>
+        </div>
+    </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
 </body>
 </html>

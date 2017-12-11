@@ -12,26 +12,8 @@ namespace HIS.Controllers
         {
             return View();
         }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-        public ActionResult Login()
-        {
-            return View();
-        }
         
-        public ActionResult guahao()
+        public ActionResult Guahao()
         {
             return View();
         }
@@ -39,7 +21,7 @@ namespace HIS.Controllers
         {
             return View();
         }
-        public ActionResult guahaoByD()
+        public ActionResult GuahaoByDisease()
         {
             return View();
         }
@@ -48,6 +30,14 @@ namespace HIS.Controllers
             return View();
         }
         public ActionResult Record()
+        {
+            return View();
+        }
+        public ActionResult SearchOrCancel()
+        {
+            return View();
+        }
+        public ActionResult Cancel_Suceed()
         {
             return View();
         }

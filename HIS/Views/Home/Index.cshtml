@@ -1,38 +1,4 @@
-﻿
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-</head>
-<body>
-    @*标题*@
-    <div class="container">
-        <div class="row">
-            <div class="page-header">
-                <h1>XX Hospital<small>To save more live.</small></h1>
-            </div>
-        </div> 
-    </div>
-    @*导航*@
-    <div class="container">
-        <div class="row">
-            <ul class="nav nav-tabs">
-                <li role="presentation" class="active">@Html.ActionLink("主页","Index","Home")</li>
-                <li role="presentation">@Html.ActionLink("预约平台","guahao","Home")</li>
-                <li role="presentation">@Html.ActionLink("查看病例","Record","Home")</a></li>
-                <li role="presentation"><a href="localhost:10405/Login.asp">后台管理系统</a></li>
-            </ul>
-        </div>
-    </div>
-    @*滚动栏目*@
+﻿    @*滚动栏目*@
     <div class="container">
         <div class="row">
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -147,14 +113,3 @@
             </div>
         </div>
     </div>
-    @*页尾版权信息*@
-    <footer class="footer">
-        <div class="container">
-            <p>@@版权所有 范国良_1440226138</p>
-            <p>Designed and built with all the love in the world by @@fgl.</p>
-        </div>
-    </footer>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-</body>
-</html>

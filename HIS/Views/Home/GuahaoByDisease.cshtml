@@ -1,104 +1,17 @@
-﻿@{
-    Layout = null;
-}
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-4" style="margin-top:7%">
+            <ul class="nav nav-pills nav-stacked">
+                <li>@Html.ActionLink("按科室挂号", "Guahao", "Home")</li>
+                <li class="active">@Html.ActionLink("按疾病挂号", "GuahaoByDisease", "GuahaoByDisease")</li>
+                <li>@Html.ActionLink("查询/取消","SearchOrCancel","Home")</li>
+                <li>@Html.ActionLink("停诊信息", "", "")</li>
+                <li>@Html.ActionLink("预约须知", "", "")</li>
+                <li>@Html.ActionLink("最新公告", "News", "Home")</li>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @*<style type="text/css">
-        .D-list dd ul li
-        {
-            font-size: 12px;
-            float: left;
-            margin-right: 4px;
-            margin-top: 4px;
-            width: 172px;
-            line-height: 24px;
-            text-align: left;
-        }
-        .D-list dt
-        {
-            width: 76px;
-            overflow: hidden;
-            color: #57B6DD;
-            font-size: 15px;
-            text-align: center;
-            padding-top: 20px;
-        }
-        .D-list dd
-        {
-            float:left;
-            width:551px;
-            padding-left:37px;
-            padding-top:10px;
-        }
-    </style>*@
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-    
-</head>
-<body>
-    <div class="container">
-        <div class="masthead">
-            <h3 class="text-muted">XX医院挂号平台</h3>
-            <nav>
-                <ul class="nav nav-justified">
-                    <li>
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            全部科室
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <li><a href="#">内科</a></li>
-                            <li><a href="#">外科</a></li>
-                            <li><a href="#">妇产科</a></li>
-                            <li><a href="#">生殖中心</a></li>
-                            <li><a href="#">儿科</a></li>
-                            <li><a href="#">骨外科</a></li>
-                            <li><a href="#">眼科</a></li>
-                            <li><a href="#">口腔科</a></li>
-                            <li><a href="#">耳鼻咽喉头颈科</a></li>
-                            <li><a href="#">其他科室</a></li>
-
-                        </ul>
-                    </li>
-                    <li>@Html.ActionLink("按科室挂号","guahao","Home")</li>
-                    <li class="active">@Html.ActionLink("按疾病挂号", "guahaoByD", "Home")</li>
-                    <li><a href="#">最新公告</a></li>
-                </ul>
-            </nav>
+            </ul>
         </div>
-        <div class="container">
-            <div class="col-md-12">
-                <h4>常见疾病</h4>
-                <table class="table table-hover">
-                    <tr>
-                        <td>眼底病</td>
-                        <td>鼻炎</td>
-                        <td>妇科炎症</td>
-                        <td>肠炎</td>
-                        <td>牙周炎</td>
-                    </tr>
-                    <tr>
-                        <td>脑血管病</td>
-                        <td>皮肤过敏</td>
-                        <td>胃炎</td>
-                        <td>肺癌</td>
-                        <td>糖尿病</td>
-                        <td class="active">展开更多</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="~/pic/HIS_1.png"/>
-                </div>
-                <div class="col-md-8">
+        <div class="col-md-8">
                     <h4 style="color:deepskyblue;border-bottom:1px solid">肌肉</h4>
                         
                     <div class="col-md-2">
@@ -219,18 +132,8 @@
                             </tr>
                         </table>
                     </div>
-
-
-
-
-
                 </div>
-            </div>
-        </div>
     </div>
+</div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-</body>
-</html>
 
