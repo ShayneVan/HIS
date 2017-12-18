@@ -26,15 +26,87 @@
             <div style="margin-top:5%;margin-left:10%">
                 <img src="~/pic/Record.png" class="img" />
             </div>
+            
         </div>
     </div>
+    
+<div class="container" id="Record">
+    <div class="row">
+        <div class="col-md-2" style="margin-top:5%">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="#">病例摘要<span class="sr-only">(current)</span></a></li>
+                <li><a href="#">医嘱简略：共14条</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="">过敏信息</a></li>
+                <li><a href="">检验内容</a></li>
+                <li><a href="">生命体征</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="">检测报告</a></li>
+                <li><a href="">监护记录</a></li>
+            </ul>
+        </div>
+        <div class="col-md-10 main">
+            <h1 class="page-header">基本信息</h1>
+            <div class="row placeholders">
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                    <h4>fgl</h4>
+                    <span class="text-muted">REW5436584</span>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder" style="margin-left:10%;color:gray">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label">性别：男</label>                          
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">出生日期：1995.01.24</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">民族：汉</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">职业：信息系统开发工程师</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">身高：172cm</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">体重：58kg</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <h2 class="sub-header">病情简述</h2>
+            <div class="panel panel-default">
+                <div class="panel-heading">主诉</div>
+                <div class="panel-body">
+                    口干、多饮、多尿、疲倦、乏力一年半
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">现病史</div>
+                <div class="panel-body">
+                    为大部分插件所具有的动作提供了自定义事件。一般来说，这些事件都有不定式和过去式两种动词的命名形式，例如，不定式形式的动词（例如 show）表示其在事件开始时被触发；而过去式动词（例如 shown ）表示在动作执行完毕之后被触发。
+
+                    从 3.0.0 版本开始，所有 Bootstrap 事件的名称都采用命名空间方式。
+
+                    所有以不定式形式的动词命名的事件都提供了 preventDefault 功能。这就赋予你在动作开始执行前将其停止的能力。
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     @Scripts.Render("~/bundles/jquery")
 
         <script>
             $("#result").hide();
+            $("#Record").hide();
         </script>
         <script type="text/javascript">
                             $("#btnsearch").click(function () {
-                                $("#result").toggle();
+                                //$("#result").toggle();
+                                $("#Record").toggle();
                             })
         </script>

@@ -21,12 +21,16 @@ namespace HIS
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/respond.js",
+                      "~/Scripts/holder.js",
+                      "~/Scripts/ie10 - viewport - bug - workaround.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/justified-nav.css"));
+                      "~/Content/justified-nav.css",
+                      "~/Content/dashboard.css",
+                      "~/Content/ie10-viewport-bug-workaround.js"));
         }
     }
 }
